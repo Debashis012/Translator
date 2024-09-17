@@ -1,0 +1,259 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: url('./Firefly welcome poster in different languages 92269.jpg') no-repeat center center/cover;
+  background-size: cover;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  max-width: 690px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(123, 123, 123, 0.7);
+  border-radius: 7px;
+  box-shadow: 0 10px 20px rgba(0, 12, 247, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.instructions {
+  color: #ffffff; /* White color */
+  font-size: 18px; /* Adjust size as needed */
+  font-weight: 600; /* Bold text */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Space below the text */
+  padding: 10px; /* Padding around the text */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.wrapper {
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+
+.wrapper .text-input {
+  display: flex;
+  border-bottom: 1px solid #f9faf9;
+}
+
+.text-input .from-text {
+  border-right: 5px solid rgb(158, 155, 155); /* Black border on the right side */
+  border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+}
+
+.text-input .to-text {
+  border-left: 5px solid rgb(158, 155, 155); /* Black border on the left side */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+}
+
+.text-input textarea {
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+}
+
+.text-input textarea:focus {
+  background: #f0f4ff;
+}
+
+.text-input textarea::placeholder {
+  color: #ffffff;
+}
+
+.output-div {
+  height: 250px;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: none;
+  font-size: 18px;
+  border: 1px solid #fffafa;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.output-div:not(:empty) {
+  background: #0044ff;
+}
+
+.controls,
+li,
+.icons,
+.icons i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  list-style: none;
+  padding: 12px 15px;
+}
+
+.controls .row .icons {
+  width: 38%;
+}
+
+.controls .row .icons i {
+  width: 50px;
+  color: #fffefe;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  justify-content: center;
+}
+
+.controls .row .icons i:hover {
+  color: #0033ff;
+  transform: scale(1.2);
+}
+
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+}
+
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+
+.controls .row select {
+  color: #ff0000;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  padding-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.controls .row select:hover {
+  color: #0024b6;
+}
+
+.text-input textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+.controls .row select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+  background: #ff0000;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+.controls .exchange {
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.controls .exchange:hover {
+  color: #0d1e64;
+  transform: rotate(180deg);
+}
+
+.controls i:active {
+  transform: scale(0.9);
+}
+
+.container button {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  background: #0033ff;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.container button:hover {
+  background: #0026ff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 660px) {
+  .container {
+    padding: 20px;
+  }
+
+  .wrapper .text-input {
+    flex-direction: column;
+  }
+
+  .text-input .to-text {
+    border-left: none;
+    border-top: 5px solid #ed0a0a;
+  }
+
+  .text-input textarea {
+    height: 200px;
+  }
+
+  .controls .row .icons {
+    display: none;
+  }
+
+  .container button {
+    padding: 13px;
+    font-size: 16px;
+  }
+
+  .controls .row select {
+    font-size: 16px;
+  }
+}
